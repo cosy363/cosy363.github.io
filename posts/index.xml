@@ -5,7 +5,6 @@
         <description>Recent content in Posts on ✍(◔◡◔)</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>ko</language>
-        <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
         <lastBuildDate>Mon, 08 Jul 2024 12:00:00 +0000</lastBuildDate>
         <atom:link href="cosy363.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
         
@@ -26,7 +25,7 @@ Github 레포지토리의 main 브랜치로 푸시가 발생하면, GitHub Webho
 </ul>
 <h1 id="jenkins-sonarqube-연동">Jenkins, Sonarqube 연동</h1>
 <h2 id="1-github-액세스-토큰-생성">1. Github 액세스 토큰 생성</h2>
-<p><img alt="image" src="https://github.com/opmate/opm-insider/assets/80619766/eb2f9f20-03d4-487f-9558-77a8418977b9"></p>
+<p><img src="https://github.com/opmate/opm-insider/assets/80619766/eb2f9f20-03d4-487f-9558-77a8418977b9" alt="image"></p>
 <p>-&gt; Github 레포별 액세스 토큰 생성</p>
 <pre><code>1. Settings &gt; Developer Settings &gt; Personal Access Tokens &gt; (Fine Grained)
 	- Generate New Token &gt; Token (Classic)
@@ -113,8 +112,8 @@ Github 레포지토리의 main 브랜치로 푸시가 발생하면, GitHub Webho
 }
 </code></pre><p>opmateSCA1!</p>
 <h1 id="result">Result</h1>
-<p><img alt="Jenkins + Sonarqube 정적분석 파이프라인 구현-1" src="https://github.com/opmate/opm-insider/assets/80619766/4f15d044-2005-4ef2-8161-06105a901919"></p>
-<p><img alt="image" src="https://github.com/opmate/opm-insider/assets/80619766/8e1bcbcb-9f01-4929-b5e7-c96c23aedea1"></p>
+<p><img src="https://github.com/opmate/opm-insider/assets/80619766/4f15d044-2005-4ef2-8161-06105a901919" alt="Jenkins + Sonarqube 정적분석 파이프라인 구현-1"></p>
+<p><img src="https://github.com/opmate/opm-insider/assets/80619766/8e1bcbcb-9f01-4929-b5e7-c96c23aedea1" alt="image"></p>
 <p>![[무제 파일.png]]![[Pasted image 20240610144309.png]]</p>
 ]]></content>
         </item>
