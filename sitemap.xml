@@ -2,35 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>cosy363.github.io/</loc>
+    <loc>/</loc>
     <lastmod>2024-07-08T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>cosy363.github.io/tags/hugo/</loc>
+    <loc>/tags/hugo/</loc>
     <lastmod>2024-07-08T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>cosy363.github.io/tags/markdown/</loc>
+    <loc>/tags/markdown/</loc>
     <lastmod>2024-07-08T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>cosy363.github.io/posts/</loc>
+    <loc>/posts/</loc>
     <lastmod>2024-07-08T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>cosy363.github.io/tags/sonarqube/</loc>
+    <loc>/tags/sonarqube/</loc>
     <lastmod>2024-07-08T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>cosy363.github.io/posts/sonarqube/</loc>
+    <loc>/posts/sonarqube/</loc>
     <lastmod>2024-07-08T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>cosy363.github.io/tags/</loc>
+    <loc>/tags/</loc>
     <lastmod>2024-07-08T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>cosy363.github.io/about/about/</loc>
+    <loc>/about/about/</loc>
   </url><url>
-    <loc>cosy363.github.io/posts/1/</loc>
+    <loc>/posts/1/</loc>
   </url><url>
-    <loc>cosy363.github.io/about/</loc>
+    <loc>/about/</loc>
   </url><url>
-    <loc>cosy363.github.io/blog/</loc>
+    <loc>/blog/</loc>
   </url><url>
-    <loc>cosy363.github.io/series/</loc>
+    <loc>/series/</loc>
   </url>
 </urlset>

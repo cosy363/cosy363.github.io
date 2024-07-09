@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sonarqube on ✍(◔◡◔)</title>
-    <link>cosy363.github.io/tags/sonarqube/</link>
+    <link>/tags/sonarqube/</link>
     <description>Recent content in Sonarqube on ✍(◔◡◔)</description>
     <generator>Hugo</generator>
     <language>ko</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Mon, 08 Jul 2024 12:00:00 +0000</lastBuildDate>
-    <atom:link href="cosy363.github.io/tags/sonarqube/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/sonarqube/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SonarQube Jenkins 설치 및 연동</title>
-      <link>cosy363.github.io/posts/sonarqube/</link>
+      <link>/posts/sonarqube/</link>
       <pubDate>Mon, 08 Jul 2024 12:00:00 +0000</pubDate>
-      <guid>cosy363.github.io/posts/sonarqube/</guid>
+      <guid>/posts/sonarqube/</guid>
       <description>Key Feature&#xA;Github 레포지토리의 main 브랜치로 푸시가 발생하면, GitHub Webhook이 Jenkins를 호출. Jenkins 서버에서 소스코드를 가져와 SonarQube Scanner로 코드에 대한 정적 분석 수행. SonarQube 서버로 정적 분석 결과 전송 Jenkins, Sonarqube 연동 1. Github 액세스 토큰 생성 -&amp;gt; Github 레포별 액세스 토큰 생성&#xA;1. Settings &amp;gt; Developer Settings &amp;gt; Personal Access Tokens &amp;gt; (Fine Grained) - Generate New Token &amp;gt; Token (Classic) - Select Scopes - `repo`, `admin:repo_hook` 2. 토큰 값 별도 저장 2.</description>
     </item>
   </channel>
