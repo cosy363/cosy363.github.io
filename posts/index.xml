@@ -1,0 +1,133 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on ✍(◔◡◔)</title>
+        <link>cosy363.github.io/posts/</link>
+        <description>Recent content in Posts on ✍(◔◡◔)</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ko</language>
+        <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+        <lastBuildDate>Mon, 08 Jul 2024 12:00:00 +0000</lastBuildDate>
+        <atom:link href="cosy363.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>SonarQube Jenkins 설치 및 연동</title>
+            <link>cosy363.github.io/posts/sonarqube/</link>
+            <pubDate>Mon, 08 Jul 2024 12:00:00 +0000</pubDate>
+            
+            <guid>cosy363.github.io/posts/sonarqube/</guid>
+            <description>Key Feature
+Github 레포지토리의 main 브랜치로 푸시가 발생하면, GitHub Webhook이 Jenkins를 호출. Jenkins 서버에서 소스코드를 가져와 SonarQube Scanner로 코드에 대한 정적 분석 수행. SonarQube 서버로 정적 분석 결과 전송 Jenkins, Sonarqube 연동 1. Github 액세스 토큰 생성 -&amp;gt; Github 레포별 액세스 토큰 생성
+1. Settings &amp;gt; Developer Settings &amp;gt; Personal Access Tokens &amp;gt; (Fine Grained) - Generate New Token &amp;gt; Token (Classic) - Select Scopes - `repo`, `admin:repo_hook` 2. 토큰 값 별도 저장 2.</description>
+            <content type="html"><![CDATA[<p>Key Feature</p>
+<ul>
+<li>Github 레포지토리의 <code>main</code> 브랜치로 푸시가 발생하면, GitHub Webhook이 Jenkins를 호출.</li>
+<li>Jenkins 서버에서 소스코드를 가져와 SonarQube Scanner로 코드에 대한 정적 분석 수행.</li>
+<li>SonarQube 서버로 정적 분석 결과 전송</li>
+</ul>
+<h1 id="jenkins-sonarqube-연동">Jenkins, Sonarqube 연동</h1>
+<h2 id="1-github-액세스-토큰-생성">1. Github 액세스 토큰 생성</h2>
+<p><img alt="image" src="https://github.com/opmate/opm-insider/assets/80619766/eb2f9f20-03d4-487f-9558-77a8418977b9"></p>
+<p>-&gt; Github 레포별 액세스 토큰 생성</p>
+<pre><code>1. Settings &gt; Developer Settings &gt; Personal Access Tokens &gt; (Fine Grained)
+	- Generate New Token &gt; Token (Classic)
+	- Select Scopes
+		- `repo`, `admin:repo_hook`
+2. 토큰 값 별도 저장
+</code></pre>
+<h2 id="2-github-webhook-설정">2. Github Webhook 설정</h2>
+<p>-&gt; 각 레포지토지에서 Webhook 설정</p>
+<pre><code>1. Repository &gt; Settings &gt; Webhook &gt; Add Webhook
+	- Payload URL : http://{public ip}:8080/github-webhook/
+	- Content Type: `application/json`
+</code></pre>
+<h2 id="3-jenkins에서-github-credentials-생성">3. Jenkins에서 Github Credentials 생성</h2>
+<p>-&gt; Github 접근용 Credential 생성</p>
+<pre><code>1. Jenkins &gt; Jenkins 관리 &gt; Credentials
+2. Domain &gt; (global) 클릭 후 Add Credentials
+	- Username: {Github 계정}
+	- Password: {1번 단계에서 생성했던 토큰값 입력}
+	- ID: {Credential 이름}
+</code></pre>
+<h2 id="4-sonarqube-프로젝트-생성">4. Sonarqube 프로젝트 생성</h2>
+<p>-&gt; 각 레포지토리 별로 1개씩 생성</p>
+<pre><code>1. Sonarqube &gt; Create Project &gt; Local Project 
+	- Use Global Setting
+</code></pre>
+<h2 id="5-sonarqube-서버-토큰-생성">5. Sonarqube 서버 토큰 생성</h2>
+<p>-&gt; Sonarqube 서버 접근용 토큰을 생성</p>
+<pre><code>1. Sonarqube &gt; My Account(우상단 버튼) &gt; Security
+2. Generate Tokens &gt; Name, Type, Expires in 입력 후 Generate 
+	- Global Analysis Token: 모든 프로젝트에 대한 권한
+	- User Token: 토큰을 생성한 유저가 가지고 있는 모든 권한
+	- Project Token: 특정 프로젝트에 대한 권한 (권장)
+3. Token 값 저장
+</code></pre>
+<h2 id="6-jenkins-sonarqube-server-관련-설정">6. Jenkins: Sonarqube Server 관련 설정</h2>
+<p>-&gt; SonarQube 서버 및 SonarQube Scanner 설정</p>
+<pre><code>- Jenkins Dashboard &gt; Jenkins 관리 &gt; System
+	1. Sonarqube servers
+		- Environment variables: ✔️
+		- SonarQube Installiation &gt; Add SonarQube
+			- Name: {Sonarqube Server Name} // This is applied to
+			- Server URL: {Sonarqube Server URL}
+			- Server Authentication Token: Add &gt; Jenkins
+				- Secret Text &gt; 5번 단계에서 생성한 토큰값 입력
+
+- Dashboard &gt; Jenkins 관리 &gt; Tools
+	- Sonarqube Scanner Installations (안보이면 Plugin Install)
+		- Add SonarQube Scanner &gt; Install Automatically
+</code></pre>
+<h2 id="7-jenkins-pipeline-생성">7. Jenkins Pipeline 생성</h2>
+<pre><code>- Jenkins Dashboard &gt; 새로운 Item &gt; Pipeline
+	- Github Project: ✔️
+		- Project URL: {Repository URL}
+	- Build Trigger &gt; Github hook trigger for GITScm Polling
+	- Pipeline &gt; Pipeline script 혹은 Pipeline script from SCM
+</code></pre>
+<p>Pipeline Script 내용</p>
+<pre tabindex="0"><code>pipeline {
+    agent any
+    stages {
+        stage(&#39;Checkout&#39;) {
+            steps {
+                // credentialsID는 3번 단계에서 생성한 Github Credentials, url은 대상 Repository URL 
+                git branch: &#39;main&#39;, credentialsId: &#39;OPMATE&#39;, url: &#39;https://github.com/opmate/opm-v2-cli.git&#39; 
+            }
+        }
+
+		stage(&#39;SonarQube analysis&#39;) {
+			steps {
+				script {
+					scannerHome = tool &#39;sonar_scanner&#39; // 6번 단계에서 생성한 SonarQube Scanner Name 명시
+				}
+				withSonarQubeEnv(&#39;Sonarqube_OPMATE&#39;) { // 6번 단계에서 설정한 SonarQube Installation Name 명시
+
+                // -Dsonar.projectKey는 4번 단계에서 생성한 Sonarqube 프로젝트 Key, -Dsonar.sources는 분석할 소스 디렉토리
+				sh &#34;${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=OPMATE_CLI -Dsonar.sources=. &#34; 
+				
+				}
+			}
+        }
+
+    }
+}
+</code></pre><p>opmateSCA1!</p>
+<h1 id="result">Result</h1>
+<p><img alt="Jenkins + Sonarqube 정적분석 파이프라인 구현-1" src="https://github.com/opmate/opm-insider/assets/80619766/4f15d044-2005-4ef2-8161-06105a901919"></p>
+<p><img alt="image" src="https://github.com/opmate/opm-insider/assets/80619766/8e1bcbcb-9f01-4929-b5e7-c96c23aedea1"></p>
+<p>![[무제 파일.png]]![[Pasted image 20240610144309.png]]</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title></title>
+            <link>cosy363.github.io/posts/1/</link>
+            <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+            
+            <guid>cosy363.github.io/posts/1/</guid>
+            <description></description>
+            <content type="html"><![CDATA[]]></content>
+        </item>
+        
+    </channel>
+</rss>
