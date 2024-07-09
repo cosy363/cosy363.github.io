@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on ✍(◔◡◔)</title>
-    <link>/tags/</link>
+    <link>cosy363.github.io/tags/</link>
     <description>Recent content in Tags on ✍(◔◡◔)</description>
     <generator>Hugo</generator>
     <language>ko</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
     <lastBuildDate>Mon, 08 Jul 2024 12:00:00 +0000</lastBuildDate>
-    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="cosy363.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo</title>
-      <link>/tags/hugo/</link>
+      <link>cosy363.github.io/tags/hugo/</link>
       <pubDate>Mon, 08 Jul 2024 12:00:00 +0000</pubDate>
-      <guid>/tags/hugo/</guid>
+      <guid>cosy363.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     <item>
       <title>Markdown</title>
-      <link>/tags/markdown/</link>
+      <link>cosy363.github.io/tags/markdown/</link>
       <pubDate>Mon, 08 Jul 2024 12:00:00 +0000</pubDate>
-      <guid>/tags/markdown/</guid>
+      <guid>cosy363.github.io/tags/markdown/</guid>
       <description></description>
     </item>
     <item>
       <title>Sonarqube</title>
-      <link>/tags/sonarqube/</link>
+      <link>cosy363.github.io/tags/sonarqube/</link>
       <pubDate>Mon, 08 Jul 2024 12:00:00 +0000</pubDate>
-      <guid>/tags/sonarqube/</guid>
+      <guid>cosy363.github.io/tags/sonarqube/</guid>
       <description></description>
     </item>
   </channel>
