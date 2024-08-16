@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>✍(◔◡◔)s</title>
+    <title>✍(◔◡◔)</title>
     <link>/</link>
-    <description>Recent content on ✍(◔◡◔)s</description>
+    <description>Recent content on ✍(◔◡◔)</description>
     <generator>Hugo</generator>
     <language>ko</language>
     <lastBuildDate>Mon, 08 Jul 2024 12:00:00 +0000</lastBuildDate>
@@ -27,7 +27,7 @@
       <link>/posts/1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/posts/1/</guid>
-      <description></description>
+      <description>HOW IS VPC IMPLEMENTED?&#xA;https://brunch.co.kr/@growthminder/104&#xA;태초엔 EC2만이 있었다. 대클라우드 전환의 시대에서, 온프레미스 데이터센터에서 넘어오는 고객은 2가지 상황을 보통 직면하게 된다.&#xA;클라우드는 리소스를 공유함으로써 리소스를 절약한다 -&amp;gt; 클라우드에서의 서버는 &amp;lsquo;VM&amp;rsquo;이다. &amp;lsquo;VM&amp;rsquo;은 하나의 물리 서버를 공유한다. -&amp;gt; 초기에 이 &amp;lsquo;VM&amp;rsquo;은 &amp;lsquo;EC2&amp;rsquo;라는 형태로 제공되었다. -&amp;gt; 하지만 이 EC2 인스턴스를 추가, 수정할 때마다 라우팅 테이블을 계속 업데이트해야된다. -&amp;gt; 인스턴스 플릿의 크기가 커질수록 라우팅 테이블의 크기가 증가한다. 또한 업데이트를 할 때 트래픽이 필연적으로 발생한다. =&amp;gt; Bottleneck!</description>
     </item>
   </channel>
 </rss>

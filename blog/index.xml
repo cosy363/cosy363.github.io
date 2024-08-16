@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on ✍(◔◡◔)s</title>
+    <title>Blog on ✍(◔◡◔)</title>
     <link>/blog/</link>
-    <description>Recent content in Blog on ✍(◔◡◔)s</description>
+    <description>Recent content in Blog on ✍(◔◡◔)</description>
     <generator>Hugo</generator>
     <language>ko</language>
     <atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
