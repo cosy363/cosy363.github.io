@@ -14,12 +14,12 @@ importers:
       '@astrojs/mdx':
         specifier: 4.3.7
         version: 4.3.7(astro@5.14.8(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.2)(rollup@4.52.5)(typescript@5.9.3)(yaml@2.8.1))
-      '@astrojs/rss':
-        specifier: 4.0.12
-        version: 4.0.12
       '@astrojs/sitemap':
         specifier: 3.6.0
         version: 3.6.0
+      '@fontsource/sometype-mono':
+        specifier: ^5.2.7
+        version: 5.2.7
       '@tailwindcss/vite':
         specifier: 4.1.15
         version: 4.1.15(vite@6.4.1(@types/node@24.9.1)(jiti@2.6.1)(lightningcss@1.30.2)(yaml@2.8.1))
@@ -90,6 +90,9 @@ importers:
       '@iconify-json/mdi':
         specifier: ^1.2.2
         version: 1.2.3
+      '@iconify-json/memory':
+        specifier: ^1.2.2
+        version: 1.2.2
       '@pagefind/default-ui':
         specifier: ^1.4.0
         version: 1.4.0
@@ -177,9 +180,6 @@ packages:
   '@astrojs/prism@3.3.0':
     resolution: {integrity: sha512-q8VwfU/fDZNoDOf+r7jUnMC2//H2l0TuQ6FkGJL8vD8nw/q5KiL3DS1KKBI3QhI9UQhpJ5dc7AtqfbXWuOgLCQ==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0}
-
-  '@astrojs/rss@4.0.12':
-    resolution: {integrity: sha512-O5yyxHuDVb6DQ6VLOrbUVFSm+NpObulPxjs6XT9q3tC+RoKbN4HXMZLpv0LvXd1qdAjzVgJ1NFD+zKHJNDXikw==}
 
   '@astrojs/sitemap@3.6.0':
     resolution: {integrity: sha512-4aHkvcOZBWJigRmMIAJwRQXBS+ayoP5z40OklTXYXhUDhwusz+DyDl+nSshY6y9DvkVEavwNcFO8FD81iGhXjg==}
@@ -462,8 +462,14 @@ packages:
   '@expressive-code/plugin-text-markers@0.41.3':
     resolution: {integrity: sha512-SN8tkIzDpA0HLAscEYD2IVrfLiid6qEdE9QLlGVSxO1KEw7qYvjpbNBQjUjMr5/jvTJ7ys6zysU2vLPHE0sb2g==}
 
+  '@fontsource/sometype-mono@5.2.7':
+    resolution: {integrity: sha512-O4+MlxspnkU4LsoKeu+kBw2HzGoZZyJ+UWgxb28M9Ppcy/nxv1PgPO2p0gD4LWMu9IPVHjDSgrhGXz+5Vg9HJg==}
+
   '@iconify-json/mdi@1.2.3':
     resolution: {integrity: sha512-O3cLwbDOK7NNDf2ihaQOH5F9JglnulNDFV7WprU2dSoZu3h3cWH//h74uQAB87brHmvFVxIOkuBX2sZSzYhScg==}
+
+  '@iconify-json/memory@1.2.2':
+    resolution: {integrity: sha512-T+1Gr/PhsJommnaqmsVFkPBHxqmO9V61wVkHvrju/AzVOOK43uSv1qmX4RgzDf6xnbnIwHk9h4bDfYdjcQ4vXQ==}
 
   '@iconify/tools@4.1.2':
     resolution: {integrity: sha512-q6NzLQYEN9zkDfcyBqD3vItHcZw97w/s++3H3TBxUORr57EfHxj6tOW6fyufDjMq+Vl56WXWaPx1csBPYlI5CA==}
@@ -1694,10 +1700,6 @@ packages:
 
   fast-uri@3.1.0:
     resolution: {integrity: sha512-iPeeDKJSWf4IEOasVVrknXpaBV0IApz/gp7S2bb7Z4Lljbl2MGJRqInZiUrQwV16cpzw/D3S5j5Julj/gT52AA==}
-
-  fast-xml-parser@5.2.5:
-    resolution: {integrity: sha512-pfX9uG9Ki0yekDHx2SiuRIyFdyAr1kMIMitPvb0YBo8SUfKvia7w7FIyd/l6av85pFYRhZscS75MwMnbvY+hcQ==}
-    hasBin: true
 
   fastq@1.19.1:
     resolution: {integrity: sha512-GwLTyxkCXjXbxqIhTsMI2Nui8huMPtnxg7krajPJAjnEG/iiOS7i+zCtWGZR9G0NBKbXKh6X9m9UIsYX/N6vvQ==}
@@ -2995,9 +2997,6 @@ packages:
     resolution: {integrity: sha512-4gB8na07fecVVkOI6Rs4e7T6NOTki5EmL7TUduTs6bu3EdnSycntVJ4re8kgZA+wx9IueI2Y11bfbgwtzuE0KQ==}
     engines: {node: '>=0.10.0'}
 
-  strnum@2.1.1:
-    resolution: {integrity: sha512-7ZvoFTiCnGxBtDqJ//Cu6fWtZtc7Y3x+QOirG15wztbdngGSkht27o2pyGWrVy0b4WAy3jbKmnoK6g5VlVNUUw==}
-
   style-to-js@1.1.18:
     resolution: {integrity: sha512-JFPn62D4kJaPTnhFUI244MThx+FEGbi+9dw1b9yBBQ+1CZpV7QAT8kUtJ7b7EUNdHajjF/0x8fT+16oLJoojLg==}
 
@@ -3606,11 +3605,6 @@ snapshots:
     dependencies:
       prismjs: 1.30.0
 
-  '@astrojs/rss@4.0.12':
-    dependencies:
-      fast-xml-parser: 5.2.5
-      kleur: 4.1.5
-
   '@astrojs/sitemap@3.6.0':
     dependencies:
       sitemap: 8.0.1
@@ -3818,7 +3812,13 @@ snapshots:
     dependencies:
       '@expressive-code/core': 0.41.3
 
+  '@fontsource/sometype-mono@5.2.7': {}
+
   '@iconify-json/mdi@1.2.3':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/memory@1.2.2':
     dependencies:
       '@iconify/types': 2.0.0
 
@@ -5144,10 +5144,6 @@ snapshots:
       micromatch: 4.0.8
 
   fast-uri@3.1.0: {}
-
-  fast-xml-parser@5.2.5:
-    dependencies:
-      strnum: 2.1.1
 
   fastq@1.19.1:
     dependencies:
@@ -6901,8 +6897,6 @@ snapshots:
       ansi-regex: 6.2.2
 
   strip-json-comments@2.0.1: {}
-
-  strnum@2.1.1: {}
 
   style-to-js@1.1.18:
     dependencies:

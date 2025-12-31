@@ -1,5 +1,6 @@
 /* would like to ignore ./src/pages/og-image/[slug].png.ts */
 @import "tailwindcss";
+
 /* config for tailwindcss-typography plugin */
 @config "../../tailwind.config.ts";
 
@@ -16,8 +17,17 @@
 	--color-quote: oklch(55.27% 0.195 19.06);
 }
 
+@font-face {
+  font-family: 'goorm-sans';
+  src: url('/fonts/goorm-sans-code.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
 	html {
+		font-family: "Sometype Mono", "goorm-sans", monospace;
 		color-scheme: light dark;
 		accent-color: var(--color-accent);
 		scrollbar-gutter: stable;

@@ -27,7 +27,7 @@ export const siteConfig: SiteConfig = {
 	*/
 	title: "devlog",
 	// ! Please remember to replace the following site property with your own domain, used in astro.config.ts
-	url: "https://brannynew.dev/",
+	url: "https://cosy363.github.io/",
 };
 
 // Used to generate links in both the Header & Footer.
@@ -42,11 +42,11 @@ export const menuLinks: { path: string; title: string }[] = [
 	},
 	{
 		path: "/posts/",
-		title: "blog(kr)",
+		title: "posts(en)",
 	},
 	{
-		path: "/notes/",
-		title: "blog(en)",
+		path: "/posts_kr/",
+		title: "posts(kr)",
 	},
 	{
 		path: "/etc/",

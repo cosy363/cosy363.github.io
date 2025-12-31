@@ -1,11 +1,12 @@
 ---
 import Search from "@/components/Search.astro";
 import ThemeToggle from "@/components/ThemeToggle.astro";
+import Github from "@/components/Github.astro";
 import { menuLinks } from "@/site.config";
 import { siteConfig } from "../../site.config";
 ---
 
-<header class="group relative mb-28 flex items-center sm:ps-18" id="main-header">
+<header class="group relative mb-12 flex items-center sm:ps-18" id="main-header">
 	<div class="flex sm:flex-col">
 		<a
 			aria-current={Astro.url.pathname === "/" ? "page" : false}
@@ -17,7 +18,7 @@ import { siteConfig } from "../../site.config";
 			>
 				<img src="/icon.svg" alt="Brannynew Logo" class="h-full w-full object-contain" />
 			</div>
-			<span class="text-xl font-bold sm:text-2xl">{siteConfig.title}</span>
+			<span class="sixtyfour-convergence text-xl font-bold sm:text-2xl">{siteConfig.title}</span>
 		</a>
 		<nav
 			aria-label="Main menu"
@@ -37,6 +38,8 @@ import { siteConfig } from "../../site.config";
 			}
 		</nav>
 	</div>
+
+	<Github />
 	<Search />
 	<ThemeToggle />
 	<mobile-button>

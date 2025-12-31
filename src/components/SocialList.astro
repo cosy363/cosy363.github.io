@@ -14,14 +14,13 @@ const socialLinks: {
 }[] = [
 	{
 		friendlyName: "Github",
-		link: "https://github.com/chrismwilliams/astro-cactus",
-		name: "mdi:github",
+		link: "https://github.com/cosy363",
+		name: "mdi:alpha-g-circle",
 	},
 ];
 ---
 
 <div class="flex flex-wrap items-end gap-x-2">
-	<p>Find me on</p>
 	<ul class="flex flex-1 items-center gap-x-2 sm:flex-initial">
 		{
 			socialLinks.map(({ friendlyName, isWebmention, link, name }) => (
@@ -32,11 +31,12 @@ const socialLinks: {
 						rel={`noreferrer ${isWebmention ? "me authn" : ""}`}
 						target="_blank"
 					>
-						<Icon aria-hidden="true" class="h-8 w-8" focusable="false" name={name} />
+						<Icon aria-hidden="true" class="h-6 w-6" focusable="false" name={name} />
 						<span class="sr-only">{friendlyName}</span>
 					</a>
 				</li>
 			))
 		}
 	</ul>
+	<p>← Github</p>
 </div>
