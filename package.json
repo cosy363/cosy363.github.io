@@ -16,7 +16,7 @@
 		"check": "astro check"
 	},
 	"dependencies": {
-		"@astrojs/markdown-remark": "^6.3.8",
+		"@astrojs/markdown-remark": "^6.3.10",
 		"@astrojs/mdx": "4.3.7",
 		"@astrojs/sitemap": "3.6.0",
 		"@fontsource/sometype-mono": "^5.2.7",
